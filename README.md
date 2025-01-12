@@ -1,17 +1,35 @@
+```markdown
+# **LangChain Question Answering System**
+ 
+*A robust and scalable Question Answering System built with **LangChain**, **FastAPI**, and **Streamlit**.*
+
 ---
 
-# **LangChain Question Answering System**
+## **Overview**
 
-*A Question Answering System built with LangChain, FastAPI (backend), and Streamlit (frontend).*
+This project is a **production-ready Question Answering System** that leverages the power of **LangChain** and **OpenAI's GPT models** to provide accurate and context-aware answers to user queries. The system is designed with a **FastAPI backend** for seamless API integration and a **Streamlit frontend** for an intuitive user experience. It also supports **Docker** for easy deployment and scalability.
 
---- 
+---
 
-## **Features**
+## **Key Features**
 
-- **Backend**: FastAPI server with LangChain integration for question answering.
-- **Frontend**: Streamlit app for user interaction.
-- **Customizable**: Add your own dataset or modify the LangChain pipeline.
-- **Docker Support**: Easily deploy the app using Docker.
+- **🔍 Context-Aware Answers**: Utilizes LangChain's RetrievalQA pipeline to provide accurate answers based on a provided dataset.
+- **🚀 FastAPI Backend**: A high-performance backend with API key authentication, rate limiting, and Swagger documentation.
+- **🎨 Streamlit Frontend**: A user-friendly interface with file upload support, interactive settings, and a chat-like interface.
+- **🐳 Docker Support**: Containerized for easy deployment and scalability.
+- **📂 Customizable Dataset**: Add your own dataset (e.g., text files, PDFs) to tailor the system to your needs.
+- **🔒 Secure**: API key authentication and rate limiting to prevent abuse.
+
+---
+
+## **Technologies Used**
+
+- **LangChain**: For natural language processing and question answering.
+- **OpenAI GPT**: For generating accurate and context-aware responses.
+- **FastAPI**: For building a high-performance backend API.
+- **Streamlit**: For creating an interactive and user-friendly frontend.
+- **Docker**: For containerization and deployment.
+- **Docker Compose**: For managing multi-container setups.
 
 ---
 
@@ -26,7 +44,7 @@ Before running the project, ensure you have the following installed:
 
 ---
 
-## **Setup**
+## **Setup Instructions**
 
 ### **1. Clone the Repository**
 
@@ -81,27 +99,16 @@ cd langchain-app
 
 ---
 
-## **Docker Setup**
+## **Docker Deployment**
 
-If you prefer to run the app using Docker:
+To deploy the application using Docker:
 
-1. Build the Docker images:
+1. Build and run the containers using Docker Compose:
    ```bash
-   docker build -t langchain-backend -f Dockerfile .
-   docker build -t langchain-frontend -f Dockerfile .
+   docker-compose up --build
    ```
 
-2. Run the backend container:
-   ```bash
-   docker run -d -p 8000:8000 langchain-backend
-   ```
-
-3. Run the frontend container:
-   ```bash
-   docker run -d -p 8501:8501 langchain-frontend
-   ```
-
-4. Access the app:
+2. Access the app:
    - **Backend**: `http://localhost:8000`
    - **Frontend**: `http://localhost:8501`
 
@@ -121,9 +128,14 @@ langchain-app/
 │   ├── app.py                # Streamlit frontend
 │   └── requirements.txt      # Frontend dependencies
 │
+├── docker/
+│   ├── Dockerfile.backend    # Dockerfile for backend
+│   └── Dockerfile.frontend   # Dockerfile for frontend
+│
+├── .env                      # Environment variables
 ├── .gitignore                # Files to ignore in Git
 ├── README.md                 # Project documentation
-└── Dockerfile                # Docker configuration
+└── docker-compose.yml        # Docker Compose configuration
 ```
 
 ---
@@ -131,17 +143,17 @@ langchain-app/
 ## **How It Works**
 
 1. The user enters a question in the Streamlit frontend.
-2. The frontend sends the question to the FastAPI backend.
-3. The backend uses LangChain and OpenAI to generate an answer based on the provided dataset.
+2. The frontend sends the question to the FastAPI backend via an API request.
+3. The backend uses **LangChain** and **OpenAI GPT** to process the question and generate an answer based on the provided dataset.
 4. The answer is sent back to the frontend and displayed to the user.
 
 ---
 
 ## **Customization**
 
-- **Dataset**: Replace `data.txt` with your own dataset.
+- **Dataset**: Replace `data.txt` with your own dataset (e.g., text files, PDFs, or JSON).
 - **LangChain Pipeline**: Modify the `RetrievalQA` chain in `backend/main.py` to use different models or configurations.
-- **API Endpoints**: Add more endpoints to the FastAPI backend for additional functionality.
+- **API Endpoints**: Add more endpoints to the FastAPI backend for additional functionality (e.g., document upload, multiple datasets).
 
 ---
 
@@ -170,5 +182,11 @@ This project is licensed under the **MIT License**.
 - **[FastAPI](https://fastapi.tiangolo.com/)** for the backend.
 - **[Streamlit](https://streamlit.io/)** for the frontend.
 
----
+### **Why This Project?**
 
+This project demonstrates my ability to:
+- Build **end-to-end AI applications**.
+- Integrate **modern tools** like LangChain, FastAPI, and Streamlit.
+- Deploy scalable solutions using **Docker**.
+
+---
