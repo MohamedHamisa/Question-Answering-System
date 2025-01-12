@@ -4,7 +4,7 @@
 
 *A Question Answering System built with LangChain, FastAPI (backend), and Streamlit (frontend).*
 
----
+--- 
 
 ## **Features**
 
