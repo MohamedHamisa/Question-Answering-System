@@ -1,5 +1,6 @@
-LangChain Question Answering System
-This project is a Question Answering System built using LangChain, FastAPI (backend), and Streamlit (frontend). It allows users to ask questions and get answers based on a provided context or dataset.
+**LangChain Question Answering System
+
+A Question Answering System built with LangChain, FastAPI (backend), and Streamlit (frontend).
 
 Features
 Backend: FastAPI server with LangChain integration for question answering.
@@ -142,7 +143,7 @@ Push to the branch (git push origin feature/YourFeatureName).
 Open a pull request.
 
 License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. 
 
 Acknowledgments
 LangChain for the powerful NLP framework.
